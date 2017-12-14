@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Hotel Virginia&ndash; Homepage</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" href="">
+	<link rel="apple-touch-icon" sizes="72x72" href="">
+	<link rel="apple-touch-icon" sizes="114x114" href="">
+<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/redmond/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/prettyPhoto.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/mediaqueries.css">
+	<link rel="stylesheet" href="colors/default.css">
+	<script src="js/modernizr.js"></script>
+
+
+</head>
+<body>
+	<table background="white">
+		<tr height="100%">
+		
+			<th width="207" height="650px" bordercolor="#474747" style="border-style: inset; background: #FFFFFF" valign="top">
+			<br /><br />
+				<ul >
+					<font face="monospace, serif" size="+1">
+					<li> <h4 style="color: black"><a href="painel.html"> Painel de reserva </a></h4></li>
+					<br />
+					<li> <a href="todas_reserva.html" style="color: black">Todas as reservas</a> </li>
+					<br />
+						<li> <a href="nova_reserva.html" style="color: #a7884e"> Nova reserva</a></li>
+					<br />
+						<li> <a href="quarto.html" style="color: black">Novo quarto</a></li>
+					</font>
+				</ul>
+			</th>
+			<br />
+			<th width="951" style="background: #222222" valign="top">
+			<div align="center">
+		  <br /><br /><br /><br /><br />
+		  <script type="text/javascript" language="javascript">
+						function valida_form(){
+										alert('Reserva atualizada.');
+										document.getElementById('envia50').submit();
+						
+								}
+							
+					</script>
+					
+					<form style="max-width: 400px" class="booking-form b-form row" id="envia50" action="nova_reserva.html" method="post">
+
+						
+						<div class="six columns"> 
+							<label for="name">Nome*</label> 
+							<input type="text" id="name" name="the_name" title="Este campo é obrigatório." value="" required maxlength="20">
+						</div>
+
+						<div class="six columns"> 
+							<label for="email">E-Mail*</label> 
+							<input type="text" id="email" name="the_email" title="Este campo é obrigatório." value="" required maxlength="30">
+						</div> 
+
+						<div class="six columns"> 
+							<label for="arrive">Data de entrada*</label> 
+							<input readonly type="text" id="arrive" class="datepicker" title="Este campo é obrigatório." name="arrive" value="" required>
+						</div>
+
+						<div class="six columns"> 
+							<label for="depart">Data de saída*</label> 
+							<input readonly id="depart" class="datepicker" title="Este campo é obrigatório." type="text" name="depart" value="" required>
+						</div>
+
+
+						<div class="twelve columns"> 
+						<center>
+							<label for="b-room">Quartos</label> 
+						</center>
+							<fieldset class="group" style="align-content: center">
+								<p style="align-content: center">
+									<center>
+									<select id="b-room" required title="Este campo é obrigatório.">
+
+										<option value="1">Selecione o quarto</option>
+										<option value="2">Quarto Individual</option>
+										<option value="3">Quarto Casal</option>
+										<option value="4">Quarto Família</option>
+									</select>
+									<label for="b-room">Status Pagamento</label> 
+									
+									<select style="background: #222222; color: white" required title="Este campo é obrigatório.">
+										<option value="1" style="background: #222222; color: white">Não renumerado</option>
+										<option value="2" style="background: #222222; color: white">Renumerado</option>
+									</select>
+								
+									<label for="email">Valor total da reserva</label> 
+									<input style="color: white" type="text" title="Este campo é obrigatório." value="R$0,00" required maxlength="30">
+								
+								
+									</center>
+								</p>
+							</fieldset>
+						</div>
+						
+						
+						
+						<div class="twelve columns"> 
+							<label for="comments">Messagem</label>
+							<textarea name="the_message" id="comments" cols="30" rows="10"></textarea>
+						</div>
+						
+					</form>
+					 <center>
+					 <table style="background: #5C5C5C">
+					 <tr valign="middle"><th>
+					 <fieldset>
+					 	<label>Atualizção de reserva</label>
+					 	<select style="background: #222222; color: white" required title="Este campo é obrigatório.">
+										<option value="1" style="background: #222222; color: white">Pendente</option>
+										<option value="2" style="background: #222222; color: white">Confirmado</option>
+									</select>
+						<label>Criado em 13 de dezembro as 22:00pm</label>
+					 </fieldset>
+					 </th></tr>
+					 </table>
+					 <br /><br />
+					 <div class="twelve columns"> 
+							<input type="submit" value="Enviar" name="send" onClick="valida_form()">	
+							<br /><br /><br />
+					 </div>
+					 </center>
+			</div>
+		  <tr  valign="bottom" align="center">
+					<center><h1 style="font-size: 40px"><a href="">VIRGINIA PALACE HOTEL</a></h1></center>
+				</tr>
+				
+			</th>
+		</tr>
+	</table>
+</body>
+<!-- Javascript
+================================================== -->
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.fitvids.js"></script>
+<script src="js/dropkick.js"></script>
+<script src="js/jquery.equalHeights.js"></script>
+<script src="js/jRespond.min.js"></script>
+<script src="js/jquery.jpanelmenu.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

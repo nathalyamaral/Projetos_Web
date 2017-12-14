@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>Hotel Virginia&ndash; Homepage</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/redmond/jquery-ui-1.10.3.custom.min.css">
+	<link rel="stylesheet" href="css/flexslider.css">
+	<link rel="stylesheet" href="css/prettyPhoto.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/mediaqueries.css">
+	<link rel="stylesheet" href="colors/default.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="">
+	<link rel="apple-touch-icon" href="">
+	<link rel="apple-touch-icon" sizes="72x72" href="">
+	<link rel="apple-touch-icon" sizes="114x114" href="">
+
+	<script src="js/modernizr.js"></script>
+
+	
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+</head>
+<body>
+
+<div id="page">
+	<header id="header">
+		<div id="top-head" class="row">
+			<div class="four columns"> <a href="https://pt-br.facebook.com/pages/Virg%C3%ADnia-Palace-Hotel/171812049538628" target="_blank"> <img width="35px" src="images/dummy/fb.png"> </a></div>
+			<div class="eight columns">
+				<div class="top-info">
+					<a class="resort-mail" href="mailto:info@yourdomain.com">atendimento@hotelbirginia.com</a>
+					<a class="resort-contact" href="contact.html">(67) 3232 2058</a>
+				</div>
+			</div>
+
+			<span class="twelve columns">
+				<span class="twelve columns separator"></span>
+			</span>
+		</div> <!-- .top-head -->
+
+		<div id="main-head" class="row">
+			<div class="five columns">
+				<hgroup id="logo">
+					<h1 style="font-size: 40px"><a href="">VIRGINIA PALACE HOTEL</a></h1>
+					<h2>O hotel mais perto de você em Corumbá!</h2>
+				</hgroup>
+			</div>
+
+			<nav id="nav">
+	<ul id="navigation" class="sf-menu group">
+		<li class='current'>
+			<a class='current' href="index.html">Página Inicial</a>
+		</li>
+		<li>
+			<a href="reserva.html">Reserva</a>
+			
+		</li>
+		
+	</ul><!-- #navigation -->
+</nav><!-- #nav -->
+		</div>
+	</header>
+
+	<div class="row">
+		<div class="twelve columns">
+			<div class="twelve columns main-separator"></div>
+		</div>
+	</div>
+	<div id="main" role="main">
+		<div id="hero" class="row">
+			<div class="eight columns">
+				<div id="home-slider" class="bs flexslider">
+					<ul class="slides">
+						<li>
+							<a href="">
+								<img src="images/dummy/slider1.jpg" alt="">
+							</a>
+						</li>
+
+						<li>
+							<a href="">
+								<img src="images/dummy/slider2.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/dummy/slider3.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/dummy/slider4.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/dummy/slider5.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/dummy/slider6.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/dummy/slider7.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/dummy/slider8.jpg" alt="">
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<img src="images/dummy/slider9.jpg" alt="">
+							</a>
+						</li>
+				
+						
+					</ul>
+				</div>
+			</div>
+
+			<div class="four columns">
+				<div class="b-form widget bg bs">
+				
+
+					<script type="text/javascript" language="javascript">
+						function valida_form(){
+							var data1 = document.getElementById('arrive');
+							var data2 = document.getElementById('depart');
+							var quarto = document.getElementById('b-room');
+							if(data1.value == '' || data2.value == '' || quarto.value == 1){
+										alert('Todos os campos são obrigatórios.');
+										data1.focus();
+										data2.focus();
+										quarto.focos();
+										return false
+						
+							}else{
+								document.getElementById('prereserva').submit();	
+							}
+								
+						}
+					</script>
+	
+	<form class="booking-form" id="prereserva" action="reserva.html">
+		<h3>Faça sua reserva</h3>
+		
+		<fieldset class="group">
+			<p>
+				<label for="arrive">Data de Entrada</label>
+				<input readonly type="text" id="arrive" class="datepicker" required title="Este campo é obrigatório.">
+			</p>
+
+			<p>
+				<label for="depart">Data de saída</label>
+				<input readonly id="depart" class="datepicker" type="text" required title="Este campo é obrigatório.">
+			</p>
+		</fieldset>
+
+			<fieldset class="group" style="align-content: center">
+				<p style="align-content: center">
+					<center>
+					<label style="text-align: center"> QUARTOS</label>
+					<select name="b-room" id="b-room" required title="Este campo é obrigatório.">
+						<option value="1">Selecione o quarto</option>
+						<option value="2">Quarto Individual</option>
+						<option value="3">Quarto Casal</option>
+						<option value="4">Quarto Família</option>
+					</select>
+					</center>
+				</p>
+			</fieldset>
+
+
+		
+	</form>
+	
+		<fieldset>
+			
+			<input type="submit" class="btn b-book" name="envia" value="Verificar Disponibilidade" id="envia" onClick="valida_form()" > 
+		</fieldset>
+		
+	
+</div>
+			</div>
+		</div>
+
+
+<!-- Javascript
+================================================== -->
+<script src="js/jquery-1.9.1.js"></script>
+<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+<script src="js/superfish.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.fitvids.js"></script>
+<script src="js/dropkick.js"></script>
+<script src="js/jquery.equalHeights.js"></script>
+<script src="js/jRespond.min.js"></script>
+<script src="js/jquery.jpanelmenu.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
